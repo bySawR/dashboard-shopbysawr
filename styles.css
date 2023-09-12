@@ -279,7 +279,7 @@ a {
 
 .search-welcome-wrapper {
     display: flex;
-    justify-content: space-between;
+    gap: 30px;
     align-items: center;
     margin-bottom: 30px;
     margin-top: 60px;
