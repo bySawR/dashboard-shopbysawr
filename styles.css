@@ -20,13 +20,14 @@
     --brand-font: Poppins, sans-serif;
 }
 
-     body {
-    padding: 50px;
+body {
+    padding: 50px!important;
     }
 
 
     .dash-wrapper {
     padding: 50px;
+    background-color: grey;
     }
 /* Markeringsfarge */
  ::-moz-selection {
@@ -384,7 +385,7 @@ a {
 }
 
 .container-list {
-
+width: 75vw;
 }
 
 .cta-grid-right {
@@ -394,6 +395,7 @@ a {
   display: flex;
   gap: 20px;
   flex-direction: column;
+  width: 25vw;
 }
 
 .cta-icon-box {
@@ -468,6 +470,7 @@ transition: 0.4s;
     }
 
     .container-list {
+      width: 75vw;
     }
 
     .name {
