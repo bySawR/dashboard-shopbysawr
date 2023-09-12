@@ -1809,3 +1809,303 @@ transition: 0.4s;
         padding: 30px;
     }
 }
+
+.caption-text {
+display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px!important;
+    text-align: center;
+    font-weight: 700;
+    padding: 20px;
+    gap: 5px;
+}
+
+.caption-text p {
+font-size: 100px!important;
+    text-align: center;
+    font-weight: 700;
+    line-height: 120px;
+    width: 100%;
+}
+.colored {
+  background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #fffcae 50%);
+}
+
+@media (max-width: 1024px) {
+.caption-text p {
+    font-size: 60px!important;
+    text-align: center;
+    font-weight: 700;
+    line-height: 40px;
+    width: 80%;
+}
+}
+.animated-text {
+    background: linear-gradient(90deg, #0079FF, #FF2970, #0079FF);
+    background-size: 500% 500%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: textGradientAnimation 10s ease infinite;
+}
+
+@keyframes textGradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+    .box {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--red);
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.5s;
+      max-height: 500px;
+      width: 100vw;
+      margin: 10px;
+      contain: paint;
+          outline: 2px solid transparent;
+      transition: 0.5s;
+    }
+
+    .box.yellow {
+      background-color: var(--yellow);
+    }
+
+    .box.red {
+      background-color: var(--red);
+    }
+
+    .box.green {
+      background-color: var(--green);
+    }
+
+    .box.blue {
+      background-color: var(--blue);
+    }
+
+    .box-heading {
+      color: white;
+      margin-bottom: 10px;
+      font-size: 40px;
+      padding: 20px;
+    font-weight: 600;
+    }
+
+    a {
+      text-decoration: none !important;
+      color: none !important;
+    }
+    
+    .box:hover {
+      outline: 2px solid var(--navy);
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      transition: 0.5s;
+    }
+
+    .box:active {
+      background-color: #3064A0;
+    }
+
+    .box-content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      contain: paint;
+    }
+
+    .box-image {
+      flex-shrink: 0;
+      width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.5s ease;
+      left: 200px;
+      bottom: 10px;
+      transform-origin: bottom right;
+      position: relative;
+    }
+
+    .box-image.assets {
+      flex-shrink: 0;
+      width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.5s ease;
+      left: 300px;
+      bottom: 450px;
+      transform-origin: bottom right;
+      position: relative;
+    }
+
+    .box:hover .box-image {
+      transform: scale(1.1);
+    }
+
+        .box.grayed-out {
+      filter: grayscale(100%);
+      opacity: 0.4;
+    }
+
+    .box.active {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+
+.box:hover ~ .box:not(:hover) {
+  filter: grayscale(100%);
+  opacity: 0.4;
+  transition: opacity 0.5s;
+}
+
+.box:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+
+    .box-text {
+      color: white;
+      font-size: 16px;
+      margin-top: auto;
+    }
+
+    .box-row {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    @media only screen and (max-width: 1600px) {
+      .box-image {
+        flex-shrink: 0;
+        width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        transition: transform 0.5s ease;
+        left: 210px;
+        bottom: -19px;
+        transform-origin: bottom right;
+        position: relative;
+        scale: 1.1;
+      }
+
+      .box-image.assets {
+        flex-shrink: 0;
+        width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        transition: transform 0.5s ease;
+        left: 324px;
+        bottom: 236px;
+        transform-origin: bottom right;
+        position: relative;
+      }
+    }
+
+    @media only screen and (max-width: 1200px) {
+      .box-image {
+        flex-shrink: 0;
+        width: 500px;
+        min-height: 100%;
+        object-fit: contain;
+        transition: transform 0.5s ease;
+        left: 170px;
+        bottom: -90px;
+        transform-origin: bottom right;
+        position: relative;
+        scale: 1.4;
+      }
+
+      .box-content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        contain: initial;
+      }
+
+      .box-image.assets {
+        flex-shrink: 0;
+        width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        transition: transform 0.5s ease;
+        left: 344px;
+        bottom: -61px;
+        transform-origin: bottom right;
+        position: relative;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .box-image.assets {
+        flex-shrink: 0;
+        width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        transition: transform 0.5s ease;
+        left: 278px;
+        bottom: -42px;
+        transform-origin: bottom right;
+        position: relative;
+      }
+
+      .box-image {
+        flex-shrink: 0;
+        width: 500px;
+        min-height: 100%;
+        object-fit: contain;
+        transition: transform 0.5s ease;
+        left: 140px;
+        bottom: -97px;
+        transform-origin: bottom right;
+        position: relative;
+        scale: 1.4;
+      }
+    }
+
+    @media only screen and (max-width: 766px) {
+      .box-row {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+      }
+
+      .box {
+        display: inline-flex;
+        flex-direction: column;
+        background-color: #FF385C;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.5s;
+        max-height: 500px;
+        width: 90vw;
+        margin: 10px;
+        contain: paint;
+        outline: 2px solid transparent;
+      }
+
+      .box-image.assets {
+        flex-shrink: 0;
+        width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        transition: transform 0.5s ease;
+        left: 330px;
+        bottom: -190px;
+        transform-origin: bottom right;
+        position: relative;
+        scale: 2;
+      }
+    }
