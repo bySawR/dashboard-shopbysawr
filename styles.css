@@ -18,6 +18,7 @@
     --success-green: #C0FFB0;
     --success-dark-green: #29853D;
     --brand-font: Poppins, sans-serif;
+    --background-grey: #F7F7F7;
 }
 
 body {
@@ -27,7 +28,7 @@ body {
 
     .dash-wrapper {
     padding: 50px;
-    background-color: grey;
+    background-color: var(--background-grey);
     }
 /* Markeringsfarge */
  ::-moz-selection {
