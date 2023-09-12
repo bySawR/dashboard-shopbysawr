@@ -375,9 +375,7 @@ a {
 .cta-heading.ad img {
     object-fit: contain;
     overflow: hidden;
-    scale: 1.7;
-    margin-left: 100px;
-    margin-top: 50px;
+    scale: 1;
 }
 
 .container-list-wrapper {
