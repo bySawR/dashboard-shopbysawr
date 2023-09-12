@@ -1,0 +1,172 @@
+<div class="container-list-wrapper">
+  <div class="container-list">
+    <div class="welcome-text">Welcome back</div>
+        <div class="welcome-name">Calzeh</div>
+    <div class="search-welcome-wrapper">
+      <div class="search-welcome">
+        <div class="welcome-text"></div>
+        <div class="heading-name">Animations</div>
+      </div>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for your animation">
+      </div>
+    </div>
+
+    <!-- File Start -->
+    <div id="fileWrappers">
+      <div class="file-wrapper">
+        <div class="icon-ani">
+          <iconify-icon icon="icon-park-outline:video" width="30"></iconify-icon>
+        </div>
+        <div class="name">Kick Follow Tag</div>
+        <div class="format">MP4</div>
+        <div class="size">1 MB</div>
+        <div class="options">
+          <div class="dropdown">
+            <iconify-icon icon="mi:options-horizontal" width="30"></iconify-icon>
+            <div class="dropdown-content">
+              <a href="https://link.bysawr.com/0d9347">Download MP4</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- File End -->
+
+    <!-- File Start -->
+    <div id="fileWrappers">
+      <div class="file-wrapper">
+        <div class="icon-ani">
+          <iconify-icon icon="icon-park-outline:video" width="30"></iconify-icon>
+        </div>
+        <div class="name">TikTok Follow Animation</div>
+        <div class="format">MP4</div>
+        <div class="size">3 MB</div>
+        <div class="options">
+          <div class="dropdown">
+            <iconify-icon icon="mi:options-horizontal" width="30"></iconify-icon>
+            <div class="dropdown-content">
+              <a href="https://link.bysawr.com/882481">Download MP4</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- File End -->
+
+    <!-- File Start -->
+    <div id="fileWrappers">
+      <div class="file-wrapper">
+        <div class="icon-ani">
+          <iconify-icon icon="icon-park-outline:video" width="30"></iconify-icon>
+        </div>
+        <div class="name">YouTube Subscribe Tag (Large)</div>
+        <div class="format">MP4</div>
+        <div class="size">3 MB</div>
+        <div class="options">
+          <div class="dropdown">
+            <iconify-icon icon="mi:options-horizontal" width="30"></iconify-icon>
+            <div class="dropdown-content">
+              <a href="https://drive.google.com/file/d/11RMxZZzkSq8cXEQJSU6uWa_XiLGRm--4/view?usp=sharing">Download MP4</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- File End -->
+
+     <!-- File Start -->
+    <div id="fileWrappers">
+      <div class="file-wrapper">
+        <div class="icon-ani">
+          <iconify-icon icon="icon-park-outline:video" width="30"></iconify-icon>
+        </div>
+        <div class="name">Twitter Follow Tag (Large)</div>
+        <div class="format">MP4</div>
+        <div class="size">4 MB</div>
+        <div class="options">
+          <div class="dropdown">
+            <iconify-icon icon="mi:options-horizontal" width="30"></iconify-icon>
+            <div class="dropdown-content">
+              <a href="https://drive.google.com/file/d/11SnhvF7MU_RZ6GzYVRnShPCCc7jns9aE/view?usp=sharing">Download MP4</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- File End -->
+
+  </div>
+
+  <div class="cta-wrapper">
+
+<!-- CTA BOX -->
+
+    <div class="cta-grid-right info">
+      <a href="https://twitter.com/shopbysawr">
+      <div class="cta-box blue">
+        <div class="cta-text">
+        <div class="cta-heading ad">One free change, just for you! <iconify-icon icon="maki:arrow" width="25" height="25"></iconify-icon></div>
+        </div>
+    </div>
+    </div>
+  </a>
+
+<!-- CTA BOX END-->
+
+<!-- CTA BOX -->
+    <div class="cta-grid-right">
+      <a href="https://shop.bysawr.com/collection/animations">
+      <div class="cta-box ad">
+        <div class="cta-heading ad">Animations
+          <div class="cta-image"><img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1h19g5g6dmtu1n9b1qkg1bd9kt0q.png" alt="Image" class="banner-image"></div></div>
+      </div>
+    </div>
+    </a>
+<!-- CTA BOX END-->
+<div class="contact-wrapper">
+<div class="contact-text">Get in touch</div>
+<div class="contact-some">
+  <a href="https://twitter.com/shopbysawr">
+  <iconify-icon class="twitter-icon" icon="formkit:twitter" width="40" height="40"></iconify-icon>
+  </a>
+</div>
+</div>
+
+  </div>
+</div>
+<script>
+  const searchInput = document.getElementById('searchInput');
+  const fileWrappers = document.getElementsByClassName('file-wrapper');
+
+  searchInput.addEventListener('input', function () {
+    const searchTerm = searchInput.value.toLowerCase();
+
+    for (let i = 0; i < fileWrappers.length; i++) {
+      const fileWrapper = fileWrappers[i];
+      const filename = fileWrapper.querySelector('.name').textContent.toLowerCase();
+
+      if (filename.includes(searchTerm)) {
+        fileWrapper.style.display = '';
+      } else {
+        fileWrapper.style.display = 'none';
+      }
+    }
+
+    // Get the visible file-wrapper elements
+    const visibleFileWrappers = Array.from(fileWrappers).filter((fw) => fw.style.display !== 'none');
+
+    // Calculate the number of visible file-wrapper elements
+    const visibleFileWrappersCount = visibleFileWrappers.length;
+
+    // Calculate the flex-basis value for the container-list based on the number of visible file-wrapper elements
+    const flexBasisValue = `${Math.min(100, Math.max(100 / visibleFileWrappersCount, 25))}%`;
+
+    // Set the flex-basis value for the container-list elements
+    visibleFileWrappers.forEach((fw) => {
+      fw.style.flexBasis = flexBasisValue;
+    });
+  });
+</script>
+</body>
+</html>
