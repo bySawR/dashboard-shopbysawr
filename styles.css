@@ -28,6 +28,8 @@ body {
 
     body nav {
   padding: var(--padding-grid);
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.03);
+
 }
 
 .container-list-wrapper {
@@ -164,7 +166,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--blue);
+    color: var(--navy);
     border-radius: 20px;
     background-color: var(--light-blue);
     height: 60px;
@@ -280,7 +282,7 @@ a {
   font-weight: 700;
   font-size: 64px;
   line-height: 81px;
-  color: #1C172C;
+  color: var(--navy);
 }
 
 .heading-name {
@@ -288,7 +290,7 @@ a {
   font-weight: 700;
   font-size: 28px;
   line-height: 34px;
-  color: #1C172C;
+  color: var(--navy);
 }
 
 .search-welcome-wrapper {
@@ -306,7 +308,7 @@ a {
     font-weight: 700;
     font-size: 18px;
     line-height: 140%;
-    color: #1C172C;
+    color: var(--navy);
     text-decoration: none;
 }
 
@@ -823,6 +825,7 @@ font-size: 100px!important;
     align-items: center;
     justify-content: space-between;
     background-color: white;
+        margin-bottom: 25px;
 }
 
 .links {
@@ -869,4 +872,15 @@ border-radius: 15px!important;
 
 a {
   cursor: pointer!important;
+}
+
+.header-logo {
+display: flex;
+    align-items: center;
+    gap: 25px;
+font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    color: var(--blue);
 }
