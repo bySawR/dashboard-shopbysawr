@@ -19,6 +19,7 @@
   </nav>
 </header>
 <body>
+  <div class="front-page-wrapper">
   <section>
 <div class="slider">
     <div class="caption-text">
@@ -43,7 +44,74 @@
         </div>
       </a>
     </div>
-
   </div>
+  <div class="heading-order">
+            The process & how it works!</div>
+
+  <div class="step-container">
+    <div class="step">
+      <div class="pulsating-circle"></div>
+      <div class="step-text">Order Received</div>
+      <div class="step-description">We have received your order and it is being processed.</div>
+    </div>
+    
+    <div class="step">
+      <div class="step-circle"></div>
+      <div class="step-text">Processing Order</div>
+      <div class="step-description">One of our experts is preparing and exporting your order.</div>
+    </div>
+    
+    <div class="step">
+      <div class="step-circle"></div>
+      <div class="step-text">Delivery Complete</div>
+      <div class="step-description">You will receive an email with a download link for your order.</div>
+    </div>
+  </div>
+    <div class="all-wrapper">
+<div class="info-wrapper">
+  <div class="step-guide">Step 1</div>
+    <div class="title-guide"> Locate Email</div>
+  <div class="description-guide">If your order has been shipped, you should have received an email about it.</div>
+</div>
+<div class="image-wrapper">
+  <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1h2rhbaves9d1ugs128vb75pgn3f.png">
+</div>
+</div>
+<div class="all-wrapper">
+<div class="info-wrapper">
+  <div class="step-guide">Step 2</div>
+    <div class="title-guide"> Access Your Download Link</div>
+  <div class="description-guide">Inside the email, you will find the highlighted part that will lead you to our animation dashboard. This dashboard allows you to access all your animations.</div>
+</div>
+<div class="image-wrapper">
+  <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1h2rd7crg1mif1ukdupvbu6lq82k.png">
+</div>
+</div>
+<div class="all-wrapper">
+<div class="info-wrapper">
+  <div class="step-guide">Step 3</div>
+    <div class="title-guide"> Enjoy your animations!</div>
+  <div class="description-guide">All your animations will be accessible forever through the provided link!</div>
+</div>
+<div class="image-wrapper">
+  <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1h2rda0ifecegp01v9afvp1sg92t.png">
+</div>
+</div>
+</div>
+</body>
+</html>
+  <script>
+    const boxes = document.querySelectorAll('.box');
+
+    function handleHover() {
+      boxes.forEach(box => box.classList.toggle('grayed-out'));
+      this.classList.toggle('active');
+    }
+
+    boxes.forEach(box => {
+      box.addEventListener('mouseenter', handleHover);
+      box.addEventListener('mouseleave', handleHover);
+    });
+  </script>
 </body>
 </html>
