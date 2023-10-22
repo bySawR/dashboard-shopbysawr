@@ -292,9 +292,9 @@ a {
 }
 
 .search-welcome-wrapper {
-display: flex;
+    display: flex;
     gap: 15px;
-    align-items: center;
+    align-items: flex-end;
     margin-bottom: 30px;
     margin-top: 60px;
     flex-direction: row;
