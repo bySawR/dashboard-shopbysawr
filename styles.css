@@ -361,7 +361,6 @@ a {
     overflow: hidden;
   outline: 3px solid transparent;
       text-decoration: none;
-      height: 200px;
         transition: box-shadow 0.3s ease;
 }
 
