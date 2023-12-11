@@ -466,7 +466,6 @@ transition: 0.4s;
 
     .cta-wrapper {
     flex-direction: column;
-    width: 90vw;
     }
 
     .cta-grid-right {
