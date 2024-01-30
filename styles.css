@@ -27,7 +27,17 @@ body {
     }
 
     body nav {
-  padding: 15px 100px;
+      color: #fff;
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    background: white;
+    backdrop-filter: blur(35px);
+    flex-direction: column;
+    width: 200px;
+    height: -webkit-fill-available;
+    justify-content: space-between;
 
 }
 
@@ -35,6 +45,7 @@ body {
   display: flex;
   gap: 40px;
   padding: var(--padding-grid);
+  margin-left: 175px;
 }
 
 
