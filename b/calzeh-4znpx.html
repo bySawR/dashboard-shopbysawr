@@ -13,14 +13,29 @@
 </head>
 <header>
   <nav>
-  <div class="header-logo">
-    <img class="logo" src="../assets/logo-dark.svg"><div class="dash-header">Dashboard</div>
-  </div>
-  <div class="links">
-    <button class="btn-primary">
-  <a href="https://shop.bysawr.com/collection/animations">Shop Now</a>
-</button>
-</div>
+    <div class="header-logo">
+      <img class="logo" src="../assets/logo-dark.svg">
+    </div>
+    <div class="contact-section">
+      <div class="sidenav-title">LINKS</div>
+
+      <a href="https://shop.bysawr.com" target="_blank" class="contact-link">
+        <div class="tooltip"><iconify-icon icon="mynaui:cart" style="color: #1C172C;" width="28"></iconify-icon>
+          <span class="tooltiptext">Shop</span>
+        </div>
+      </a>
+      <a href="https://twitter.com/bySawR" target="_blank" class="contact-link">
+        <div class="tooltip"><iconify-icon icon="mynaui:envelope" style="color: #1C172C;" width="28"></iconify-icon>
+          <span class="tooltiptext">Contact</span>
+        </div>
+      </a>
+      <a href="https://studio.bysawr.com" target="_blank" class="contact-link">
+        <div class="tooltip"><iconify-icon icon="mynaui:briefcase" style="color: #1C172C;" width="28"></iconify-icon>
+          <span class="tooltiptext">Portfolio</span>
+        </div>
+      </a>
+    </div>
+    <div class="sidenav-title">V2.0</div>
   </nav>
 </header>
 <body class="dash-wrapper">
@@ -32,10 +47,16 @@
       <div class="search-welcome">
         <div class="welcome-text"></div>
       </div>
-      <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search for your animation">
+        <div class="search-container">
+          <form>
+
+            <input type="text" id="searchInput" placeholder="Search for your animation">
+            <div class="search-icon">
+              <iconify-icon icon="mynaui:search" width="28" height="28"></iconify-icon>
+            </div>
+        </div>
+        </form>
       </div>
-    </div>
 
     <!-- File Start -->
     <div id="fileWrappers">
@@ -123,38 +144,8 @@
 
   </div>
 
-  <div class="cta-wrapper">
 
-<!-- CTA BOX -->
-<a href="https://twitter.com/shopbysawr">
-    <div class="cta-grid-right info">
-      <div class="cta-box blue">
-        <div class="cta-text">
-        <div class="cta-heading ad">One free change, just for you</div>
-        </div>
-    </div>
-    </div>
-  </a>
 
-<!-- CTA BOX END-->
-
-<!-- CTA BOX -->
-    <div class="cta-grid-right">
-      <a href="https://shop.bysawr.com/collection/animations">
-      <div class="cta-box ad">
-        <div class="cta-heading ad">Browse more animations
-      </div>
-    </div>
-    </a>
-<!-- CTA BOX END-->
-<div class="contact-wrapper">
-<div class="contact-text">Get in touch</div>
-<div class="contact-some">
-  <a href="https://twitter.com/shopbysawr">
-  <iconify-icon class="twitter-icon" icon="formkit:twitter" width="40" height="40"></iconify-icon>
-  </a>
-</div>
-</div>
 
   </div>
 </div>

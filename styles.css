@@ -19,7 +19,7 @@
     --success-dark-green: #29853D;
     --brand-font: Poppins, sans-serif;
     --background-grey: #F7F7F7;
-    --padding-grid: 15px 100px 15px 100px;
+    --padding-grid: 25px 75px 25px 75px;
 }
 
 body {
@@ -30,14 +30,16 @@ body {
       color: #fff;
     position: fixed;
     display: flex;
-    align-items: flex-start;
-    padding: 15px;
+    width: 75px;
+    align-items: center;
+    padding: 25px 15px;
     background: white;
     backdrop-filter: blur(35px);
     flex-direction: column;
-    width: 200px;
+    height: 100%;
     height: -webkit-fill-available;
     justify-content: space-between;
+    color: var(--navy);
 
 }
 
@@ -45,7 +47,7 @@ body {
   display: flex;
   gap: 40px;
   padding: var(--padding-grid);
-  margin-left: 175px;
+  margin-left: 100px;
 }
 
 
@@ -214,6 +216,19 @@ a {
 #searchInput {
   width: 100%;
   padding: 20px 20px;
+  background: none;
+  border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #808080;
+  box-sizing: border-box;
+}
+
+form {
+  width: 100%;
+  display: flex;
   background: #FFFFFF;
   border: 1px solid #DCDCDC;
   border-radius: 10px;
@@ -292,7 +307,7 @@ a {
   font-style: normal;
   font-weight: 700;
   font-size: 60px;
-  line-height: 81px;
+  line-height: 60px;
   color: var(--navy);
 }
 
@@ -835,7 +850,6 @@ font-size: 100px!important;
     align-items: center;
     justify-content: space-between;
     background-color: white;
-        margin-bottom: 25px;
 }
 
 .links {
@@ -1356,4 +1370,65 @@ padding-left: 100px;
     display: flex;
     gap: 50px;
     flex-direction: column;
+}
+
+.contact-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-section a, iconify-icon {
+  display: flex;
+  color: inherit;
+  justify-content: center;
+  font-size: 15px;
+  height: 40px;
+  line-height: 0;
+  width: 40px;
+  padding: 10px 10px;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 20px;
+}
+
+.contact-section a:hover {
+  background-color: var(--light-blue);
+  cursor: pointer;
+}
+
+.sidenav-title {
+  opacity: 0.3;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  line-height: normal;
+  padding: 5px 15px;
+  border-radius: 6px;
+  left: 50px;
+  top: 15px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
