@@ -43,6 +43,12 @@ body {
 
 }
 
+.nav-front {
+display: flex;
+padding: var(--padding-grid);
+justify-content: space-between;
+}
+
 .container-list-wrapper {
   display: flex;
   gap: 40px;
