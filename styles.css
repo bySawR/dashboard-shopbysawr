@@ -260,14 +260,18 @@ form {
   background-color: #f9f9f9;
   box-shadow: 0px 17.6661px 35.3322px rgba(0, 0, 0, 0.1);
   z-index: 1;
+  right: 150px;
+    top: 45px;
   border-radius: 10px;
   opacity: 0;
+  width: 100px;
   cursor: pointer;
   color: var(--navy);
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
+  width: 100px;
   opacity: 1;
 }
 
@@ -290,7 +294,6 @@ form {
 }
     .dropdown-content a:focus {
      background-color: #dae9fa;
-     box-sizing: border-box;
      text-decoration: none;
      opacity: 1!important;
      border-color: var(--navy);
