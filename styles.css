@@ -19,7 +19,7 @@
     --success-dark-green: #29853D;
     --brand-font: Poppins, sans-serif;
     --background-grey: #F7F7F7;
-    --padding-grid: 25px 100px 25px 100px;
+    --padding-grid: 15px 100px 15px 100px;
 }
 
 body {
@@ -27,7 +27,7 @@ body {
     }
 
     body nav {
-  padding: var(--padding-grid);
+  padding: 15px 100px;
 
 }
 
@@ -168,15 +168,15 @@ body {
     color: var(--navy);
     border-radius: 20px;
     background-color: var(--light-blue);
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     margin-right: 30px;
 }
 
 .name {
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 25px;
   color: var(--navy);
   width: 25vw;
@@ -186,7 +186,7 @@ body {
 .size {
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 25px;
   color: #808080;
   width: 10vw;
@@ -197,22 +197,23 @@ a {
 }
 
 .search-container {
-  width: 50%!important;
+  width: 100%!important;
 }
 
 #searchInput {
   width: 100%;
-  padding: 25px 30px;
+  padding: 20px 20px;
   background: #FFFFFF;
   border: 1px solid #DCDCDC;
   border-radius: 10px;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 25px;
   color: #808080;
   box-sizing: border-box;
 }
+
 
 .dropdown {
   position: relative;
@@ -271,15 +272,15 @@ a {
 .welcome-text {
   font-style: normal;
   font-weight: 700;
-  font-size: 40px;
-  line-height: 50px;
+  font-size: 30px;
+  line-height: 40px;
   color: var(--blue);
 }
 
 .welcome-name {
   font-style: normal;
   font-weight: 700;
-  font-size: 64px;
+  font-size: 60px;
   line-height: 81px;
   color: var(--navy);
 }
@@ -294,13 +295,14 @@ a {
 
 .search-welcome-wrapper {
     display: flex;
-    gap: 15px;
     align-items: flex-end;
-    margin-bottom: 30px;
-    margin-top: 60px;
+    margin-bottom: 15px;
+    margin-top: 30px;
     flex-direction: row;
     justify-content: space-between;
 }
+
+
 
 .cta-heading {
     font-style: normal;
@@ -812,7 +814,7 @@ font-size: 100px!important;
     }
 
     .logo {
-      height: 60px;
+      height: 50px;
     }
 
     nav {
@@ -877,7 +879,7 @@ display: flex;
     gap: 15px;
 font-style: normal;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 20px;
     line-height: 34px;
     color: var(--navy);
 }
