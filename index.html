@@ -1,133 +1,257 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Dashboard | bySawR</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | bySawR</title>
+    <meta name="description" content="Access your purchased animations from bySawR.">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="shortcut icon" href="assets/favicon.ico">
-  <script type="text/javascript" src="/script.js" defer></script>
-<link rel="stylesheet" href="styles.css">
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-<script src="https://kit.fontawesome.com/5be3d1e1dc.js" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=block" rel="stylesheet">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7DR52CWZD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-F7DR52CWZD');
-</script></head>
-<div class="header-front">
-  <div class="nav-front">
-  <div class="header-logo">
-    <img class="logo" src="assets/logo-dark.svg"><div class="dash-header">Dashboard</div>
-  </div>
-  <div class="links">
-    <button class="btn-primary">
-  <a href="https://shop.bysawr.com/collection/animations">Shop Now</a>
-</button>
-</div>
-  </div>
-</div>
-<body>
-  <div class="front-page-wrapper">
-  <section>
-<div class="slider">
-    <div class="caption-text">
-          <p>Welcome to our brand new <span class="animated-text">dashboard!</span></p>
-    </div>
-</div>
-</section>
-  <div class="box-row">
-    <div class="box red">
-      <a href="https://shop.bysawr.com/collection/animations">
-        <div class="box-content">
-          <span class="box-heading">Animations</span>
-          <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1h19g5g6dmtu1n9b1qkg1bd9kt0q.png" alt="Image" class="box-image">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'blue': '#0079ff',
+                        'red': '#ff2970',
+                        'navy': '#1c172c',
+                        'green': '#45e55f'
+                    },
+                    fontFamily: {
+                        'brand': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .animated-text {
+            background: linear-gradient(90deg, #0079ff, #ff2970, #0079ff);
+            background-size: 200% 200%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: gradient 3s ease infinite;
+        }
+        @keyframes gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .pulse-dot {
+            width: 16px;
+            height: 16px;
+            background: #45e55f;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="font-brand bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="assets/logo-dark.svg" alt="bySawR" class="h-8">
+                <span class="text-xl font-bold text-navy">Dashboard</span>
+            </div>
+            <a href="https://shop.bySawR.com/collection/animations" 
+               class="bg-blue hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                Shop Now
+            </a>
         </div>
-      </a>
-    </div>
-    <div class="box blue">
-      <a href="https://shop.bysawr.com/collection/most-popular">
-        <div class="box-content">
-          <span class="box-heading">Most Popular</span>
-          <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1h19oblm31k5248tcndagc8l92g.png" alt="Image 2" class="box-image">
+    </header>
+
+    <!-- Hero -->
+    <section class="py-20 px-6 text-center">
+        <h1 class="text-5xl md:text-6xl font-bold text-navy mb-6 max-w-4xl mx-auto leading-tight">
+            Welcome to our brand new<br>
+            <span class="animated-text">dashboard!</span>
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 max-w-xl mx-auto">
+            Access and download your purchased animations from bySawR.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://shop.bySawR.com/collection/animations" 
+               class="bg-blue hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+                Browse Animations
+            </a>
+            <button onclick="document.getElementById('process').scrollIntoView({behavior:'smooth'})" 
+                    class="border border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-3 rounded-lg font-medium transition-colors">
+                How It Works
+            </button>
         </div>
-      </a>
-    </div>
-  </div>
-  <div class="heading-order">
-            The process & how it works!</div>
+    </section>
 
-  <div class="step-container">
-    <div class="step">
-      <div class="pulsating-circle"></div>
-      <div class="step-text">Order Received</div>
-      <div class="step-description">We have received your order and it is being processed.</div>
-    </div>
-    
-    <div class="step">
-      <div class="step-circle"></div>
-      <div class="step-text">Processing Order</div>
-      <div class="step-description">One of our experts is preparing and exporting your order.</div>
-    </div>
-    
-    <div class="step">
-      <div class="step-circle"></div>
-      <div class="step-text">Delivery Complete</div>
-      <div class="step-description">You will receive an email with a download link for your order.</div>
-    </div>
-  </div>
-    <div class="all-wrapper">
-<div class="info-wrapper">
-  <div class="step-guide">Step 1</div>
-    <div class="title-guide"> Locate Email</div>
-  <div class="description-guide">If your order has been shipped, you should have received an email about it</div>
-</div>
-<div class="image-wrapper">
-  <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1h2rhbaves9d1ugs128vb75pgn3f.png">
-</div>
-</div>
-<div class="all-wrapper">
-<div class="info-wrapper">
-  <div class="step-guide">Step 2</div>
-    <div class="title-guide"> Access Your Download Link</div>
-  <div class="description-guide">Inside the email, you will find the highlighted part that will lead you to our animation dashboard. This dashboard allows you to access all your animations.</div>
-</div>
-<div class="image-wrapper">
-  <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1h2rd7crg1mif1ukdupvbu6lq82k.png">
-</div>
-</div>
-<div class="all-wrapper">
-<div class="info-wrapper">
-  <div class="step-guide">Step 3</div>
-    <div class="title-guide"> Enjoy your animations!</div>
-  <div class="description-guide">All your animations will be accessible forever through the provided link!</div>
-</div>
-<div class="image-wrapper">
-  <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1h2rda0ifecegp01v9afvp1sg92t.png">
-</div>
-</div>
-</div>
-</body>
-</html>
-  <script>
-    const boxes = document.querySelectorAll('.box');
+    <!-- Feature Cards -->
+    <section class="py-16 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+            <div class="bg-gradient-to-br from-red to-pink-600 rounded-2xl p-8 text-white relative overflow-hidden group hover:scale-105 transition-transform">
+                <h3 class="text-3xl font-bold">Animations</h3>
+                <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1h19g5g6dmtu1n9b1qkg1bd9kt0q.png" 
+                     alt="Animations" 
+                     class="absolute -bottom-4 -right-4 w-64 opacity-80 group-hover:scale-110 transition-transform">
+            </div>
+            
+            <div class="bg-gradient-to-br from-blue to-blue-600 rounded-2xl p-8 text-white relative overflow-hidden group hover:scale-105 transition-transform">
+                <h3 class="text-3xl font-bold">Most Popular</h3>
+                <img src="https://payhip.com/cdn-cgi/image/format=auto/https://pe56d.s3.amazonaws.com/o_1h19oblm31k5248tcndagc8l92g.png" 
+                     alt="Popular" 
+                     class="absolute -bottom-4 -right-4 w-64 opacity-80 group-hover:scale-110 transition-transform">
+            </div>
+        </div>
+    </section>
 
-    function handleHover() {
-      boxes.forEach(box => box.classList.toggle('grayed-out'));
-      this.classList.toggle('active');
-    }
+    <!-- Process -->
+    <section id="process" class="py-16 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-navy mb-12">The process & how it works!</h2>
+            
+            <!-- Progress -->
+            <div class="flex justify-center items-center mb-16">
+                <div class="flex items-center gap-8">
+                    <div class="text-center">
+                        <div class="pulse-dot mx-auto mb-2"></div>
+                        <div class="font-medium text-navy">Order Received</div>
+                        <div class="text-sm text-gray-500">Being processed</div>
+                    </div>
+                    <div class="w-12 h-px bg-gray-300"></div>
+                    <div class="text-center">
+                        <div class="w-4 h-4 bg-gray-300 rounded-full mx-auto mb-2"></div>
+                        <div class="font-medium text-navy">Processing Order</div>
+                        <div class="text-sm text-gray-500">Preparing files</div>
+                    </div>
+                    <div class="w-12 h-px bg-gray-300"></div>
+                    <div class="text-center">
+                        <div class="w-4 h-4 bg-gray-300 rounded-full mx-auto mb-2"></div>
+                        <div class="font-medium text-navy">Delivery Complete</div>
+                        <div class="text-sm text-gray-500">Email sent</div>
+                    </div>
+                </div>
+            </div>
 
-    boxes.forEach(box => {
-      box.addEventListener('mouseenter', handleHover);
-      box.addEventListener('mouseleave', handleHover);
-    });
-  </script>
+            <!-- Steps -->
+            <div class="space-y-12">
+                <!-- Step 1 -->
+                <div class="flex flex-col lg:flex-row items-center gap-8">
+                    <div class="lg:w-1/2">
+                        <div class="bg-blue text-white px-3 py-1 rounded-full text-sm font-medium mb-3 inline-block">STEP 1</div>
+                        <h3 class="text-xl font-bold text-navy mb-3">Locate Email</h3>
+                        <p class="text-gray-600">Check your inbox for our delivery notification email.</p>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <!-- Clean Email Mockup -->
+                        <div class="bg-white rounded-lg shadow-lg p-6 max-w-md mx-auto">
+                            <div class="flex items-center gap-3 mb-4 pb-3 border-b">
+                                <div class="w-8 h-8 bg-blue rounded-full flex items-center justify-center">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-medium text-navy">bySawR</div>
+                                    <div class="text-sm text-gray-500">Your order is ready!</div>
+                                </div>
+                            </div>
+                            <div class="text-sm text-gray-600 mb-3">
+                                <strong>Subject:</strong> Your animations are ready for download
+                            </div>
+                            <div class="text-sm text-gray-600">
+                                Hi there! Your animation order has been processed and is ready for download.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-8">
+                    <div class="lg:w-1/2">
+                        <div class="bg-blue text-white px-3 py-1 rounded-full text-sm font-medium mb-3 inline-block">STEP 2</div>
+                        <h3 class="text-xl font-bold text-navy mb-3">Access Your Download Link</h3>
+                        <p class="text-gray-600">Click the highlighted link to access your animation dashboard.</p>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <!-- Clean Email with Link Mockup -->
+                        <div class="bg-white rounded-lg shadow-lg p-6 max-w-md mx-auto">
+                            <div class="text-sm text-gray-600 mb-4">
+                                Thank you for your order! Click the button below to access your animations:
+                            </div>
+                            <div class="bg-blue text-white px-6 py-3 rounded-lg text-center font-medium mb-4 cursor-pointer hover:bg-blue-600 transition-colors">
+                                Access Dashboard
+                            </div>
+                            <div class="text-xs text-gray-500">
+                                This link will remain active forever for your convenience.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col lg:flex-row items-center gap-8">
+                    <div class="lg:w-1/2">
+                        <div class="bg-blue text-white px-3 py-1 rounded-full text-sm font-medium mb-3 inline-block">STEP 3</div>
+                        <h3 class="text-xl font-bold text-navy mb-3">Enjoy your animations!</h3>
+                        <p class="text-gray-600">Download and use your animations forever through the provided link.</p>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <!-- Clean File List Mockup -->
+                        <div class="bg-white rounded-lg shadow-lg p-6 max-w-md mx-auto">
+                            <div class="font-medium text-navy mb-4">Your Animation Files</div>
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                                    <div class="w-8 h-8 bg-red rounded-lg flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="font-medium text-sm">Subscribe Animation</div>
+                                        <div class="text-xs text-gray-500">MP4 • 2.1 MB</div>
+                                    </div>
+                                    <button class="text-blue hover:text-blue-600">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                                    <div class="w-8 h-8 bg-blue rounded-lg flex items-center justify-center">
+                                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="font-medium text-sm">Follow Animation</div>
+                                        <div class="text-xs text-gray-500">MP4 • 1.8 MB</div>
+                                    </div>
+                                    <button class="text-blue hover:text-blue-600">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 px-6 bg-navy text-white text-center">
+        <h2 class="text-3xl font-bold mb-4">Ready to get started?</h2>
+        <p class="text-xl opacity-80 mb-8">Browse our collection of professional animations.</p>
+        <a href="https://shop.bySawR.com" 
+           class="bg-blue hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+            shop.bysawr.com
+        </a>
+    </section>
 </body>
 </html>

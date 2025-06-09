@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - BySawr</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'blue': '#0079ff',
+                        'navy': '#1c172c'
+                    },
+                    fontFamily: {
+                        'brand': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-brand bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen flex items-center justify-center">
+    <div class="text-center p-8">
+        <!-- Icon -->
+        <div class="w-20 h-20 mx-auto mb-6 bg-blue rounded-full flex items-center justify-center">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+            </svg>
+        </div>
+
+        <!-- Message -->
+        <h1 class="text-5xl font-bold text-navy mb-4">404</h1>
+        <h2 class="text-2xl font-bold text-navy mb-6">Page Not Found</h2>
+        
+        <!-- Notice -->
+        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6 max-w-md mx-auto">
+            <p class="text-yellow-800 font-medium">Page may still be deploying</p>
+            <p class="text-yellow-700 text-sm">Try refreshing in a few seconds</p>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex flex-col sm:flex-row gap-3 justify-center mb-6">
+            <button onclick="window.location.reload()" 
+                    class="bg-blue hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                Refresh Page
+            </button>
+            <a href="https://shop.bysawr.com" 
+               class="border border-blue text-blue hover:bg-blue hover:text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                Visit Shop
+            </a>
+        </div>
+
+        <!-- Timer -->
+        <div class="text-blue font-medium">
+            Auto-refresh in <span id="countdown">15</span>s
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-8 pt-6 border-t border-gray-200">
+            <div class="flex items-center justify-center gap-2 mb-2">
+                <img src="assets/logo-dark.svg" alt="BySawr" class="h-6">
+                <span class="font-bold text-navy">BySawr</span>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2024 BySawr. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        let countdown = 15;
+        const countdownEl = document.getElementById('countdown');
+        
+        const timer = setInterval(() => {
+            countdown--;
+            countdownEl.textContent = countdown;
+            
+            if (countdown <= 0) {
+                clearInterval(timer);
+                window.location.reload();
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
