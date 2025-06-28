@@ -298,9 +298,9 @@ form:focus-within {
   right: 0;
   top: 24px;
   background: var(--card-bg);
-  border-radius: var(--border-radius);
+  border-radius: 8px;
   min-width: 10rem;
-  box-shadow: 0 4px 12px var(--dropdown-shadow);
+  outline: 1px solid lightgrey;
   z-index: 1000;
 }
 
