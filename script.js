@@ -1,35 +1,52 @@
-  const searchInput = document.getElementById('searchInput');
-  const fileWrappers = document.getElementsByClassName('file-wrapper');
+const searchInput = document.getElementById('searchInput');
+const fileWrappers = document.getElementsByClassName('file-wrapper');
 
-  searchInput.addEventListener('input', function () {
-    const searchTerm = searchInput.value.toLowerCase();
+// Add fade-in animation on load
+Array.from(fileWrappers).forEach((fileWrapper, index) => {
+  fileWrapper.style.opacity = '0';
+  fileWrapper.style.transform = 'translateY(10px)';
+  fileWrapper.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+  setTimeout(() => {
+    fileWrapper.style.opacity = '1';
+    fileWrapper.style.transform = 'translateY(0)';
+  }, index * 100); // staggered effect
+});
 
-    for (let i = 0; i < fileWrappers.length; i++) {
-      const fileWrapper = fileWrappers[i];
-      const filename = fileWrapper.querySelector('.name').textContent.toLowerCase();
+searchInput.addEventListener('input', function () {
+  const searchTerm = searchInput.value.toLowerCase();
 
-      if (filename.includes(searchTerm)) {
-        fileWrapper.style.display = '';
-      } else {
+  let visibleCount = 0;
+
+  for (let i = 0; i < fileWrappers.length; i++) {
+    const fileWrapper = fileWrappers[i];
+    const filename = fileWrapper.querySelector('.name').textContent.toLowerCase();
+
+    if (filename.includes(searchTerm)) {
+      fileWrapper.style.display = '';
+      requestAnimationFrame(() => {
+        fileWrapper.style.opacity = '1';
+        fileWrapper.style.transform = 'translateY(0)';
+      });
+      visibleCount++;
+    } else {
+      fileWrapper.style.opacity = '0';
+      fileWrapper.style.transform = 'translateY(10px)';
+      setTimeout(() => {
         fileWrapper.style.display = 'none';
-      }
+      }, 200); // delay hiding to allow fade-out
     }
+  }
 
-    // Get the visible file-wrapper elements
-    const visibleFileWrappers = Array.from(fileWrappers).filter((fw) => fw.style.display !== 'none');
+  // Adjust layout based on visible count
+  const flexBasis = `${Math.min(100, Math.max(100 / visibleCount, 25))}%`;
 
-    // Calculate the number of visible file-wrapper elements
-    const visibleFileWrappersCount = visibleFileWrappers.length;
-
-    // Calculate the flex-basis value for the container-list based on the number of visible file-wrapper elements
-    const flexBasisValue = `${Math.min(100, Math.max(100 / visibleFileWrappersCount, 25))}%`;
-
-    // Set the flex-basis value for the container-list elements
-    visibleFileWrappers.forEach((fw) => {
-      fw.style.flexBasis = flexBasisValue;
-    });
+  Array.from(fileWrappers).forEach((fw) => {
+    if (fw.style.display !== 'none') {
+      fw.style.flexBasis = flexBasis;
+    }
   });
-
+});
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+const defaultTab = document.getElementById("defaultOpen");
+if (defaultTab) defaultTab.click();
